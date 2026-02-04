@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Demo Crypto Wallet</title>
+
+  <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-logo">💰</div>
+  <div class="loader-bar"></div>
+</div>
+
+<div id="login" class="login hidden">
+  <h2>Demo Wallet</h2>
+  <input id="username" placeholder="Username"/>
+  <button onclick="login()">Enter</button>
+</div>
+
+<div id="app" class="app hidden">
+  <header>
+    <h1>Portfolio</h1>
+    <p id="balance">$0.00</p>
+    <span id="change">0.00%</span>
+  </header>
+
+  <main id="screen"></main>
+
+  <nav>
+    <button onclick="home()">Home</button>
+    <button onclick="trade()">Trade</button>
+    <button onclick="pay()">Pay</button>
+    <button onclick="tx()">Tx</button>
+  </nav>
+</div>
+
+<script src="auth.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
